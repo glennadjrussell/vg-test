@@ -1,0 +1,7 @@
+domain: falselypositive.com
+repo: github.com/glennadjrussell/vault-guardian
+resources:
+- group: secretmanagement
+  kind: Vaultapp
+  version: v1
+version: "2"

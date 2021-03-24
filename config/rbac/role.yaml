@@ -1,0 +1,28 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - secretmanagement.falselypositive.com
+  resources:
+  - vaultapps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - secretmanagement.falselypositive.com
+  resources:
+  - vaultapps/status
+  verbs:
+  - get
+  - patch
+  - update
