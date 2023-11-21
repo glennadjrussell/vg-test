@@ -32,6 +32,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: build docker
-      run: docker build -t mycontainer .
+      run: |
+        docker build -t mycontainer .
+        docker tag mycontainer gadjrussell/mycontainer:latest
+
+    - name: login
+      run: docker login --username foo --password bar
+
     - name: push to dockerhub
-      run: docker push mycontainer
+      run: docker push gadjrussell/mycontainer:latest
