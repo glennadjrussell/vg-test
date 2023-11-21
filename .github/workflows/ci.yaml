@@ -14,3 +14,9 @@ jobs:
     - name: cat some file
       run: cat Makefile
 
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: build our go code
+      run: go build
