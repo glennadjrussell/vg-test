@@ -3,3 +3,10 @@ name: my-demo
 on:
   push:
 
+jobs:
+  hello-devops-bfs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - runs: echo "Hello to us!"
+
