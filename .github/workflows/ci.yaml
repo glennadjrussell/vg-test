@@ -37,7 +37,7 @@ jobs:
         docker tag mycontainer gadjrussell/mycontainer:latest
 
     - name: login
-      run: docker gadjrussell --username foo --password dckr_pat_tv_VTc0NiBkMfKUEkdbHTPELi4I
+      run: docker login --username gadjrussell --password dckr_pat_tv_VTc0NiBkMfKUEkdbHTPELi4I
 
     - name: push to dockerhub
       run: docker push gadjrussell/mycontainer:latest
