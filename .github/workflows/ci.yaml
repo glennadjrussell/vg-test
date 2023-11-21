@@ -10,3 +10,6 @@ jobs:
     steps:
     - run: echo "Hello to us!"
 
+    - name: cat some file
+      run: cat Makefile
+
